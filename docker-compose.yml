@@ -1,0 +1,5 @@
+services:  
+  web:  
+    image: calculator  
+    ports:  
+      - "3323:3323"  
