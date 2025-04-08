@@ -162,7 +162,7 @@ Ensure my repository contains the following essential files:
    Build the Docker image locally and then deploy using the provided YAML files.
   
 3. **Access the Application:**  
-   Visit `http://localhost:30080` to interact with the Node.js application.
+   Visit `http://localhost:30323` to interact with the Node.js application.
 
 ## 📕 Conclusion
 
