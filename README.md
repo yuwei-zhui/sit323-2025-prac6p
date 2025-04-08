@@ -60,24 +60,23 @@ The code and configuration files are hosted on GitHub:
    apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: calculator-deployment
+  name: calculator-deployment
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: calculator
-  template:
-    metadata:
-      labels:
-        app: calculator
-    spec:
-      containers:
-      - name: sit323-2025-prac5p
-        image: zhuiyuwei/calculator:latest
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3323
-
+  replicas: 3
+  selector:
+    matchLabels:
+      app: calculator
+  template:
+    metadata:
+      labels:
+        app: calculator
+    spec:
+      containers:
+      - name: sit323-2025-prac5p
+        image: zhuiyuwei/calculator:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3323
    ```
 
 2. **Apply the Deployment**  
