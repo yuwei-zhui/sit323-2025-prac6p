@@ -54,38 +54,38 @@ The code and configuration files are hosted on GitHub:
 ### Step 3: Create the Kubernetes Deployment
 
 1. **Write the Deployment YAML File**  
-   Create a file named `service.yaml` with the following content:
+   Create a file named `deployment.yaml` with the following content:
 
    ```yaml
    apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: calculator-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: calculator
-  template:
-    metadata:
-      labels:
-        app: calculator
-    spec:
-      containers:
-      - name: sit323-2025-prac5p
-        image: zhuiyuwei/calculator:latest
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3323
+   kind: Deployment
+   metadata:
+     name: calculator-deployment
+   spec:
+     replicas: 3
+     selector:
+       matchLabels:
+         app: calculator
+     template:
+       metadata:
+         labels:
+           app: calculator
+       spec:
+         containers:
+         - name: sit323-2025-prac5p
+           image: zhuiyuwei/calculator:latest
+           imagePullPolicy: IfNotPresent
+           ports:
+           - containerPort: 3323
    ```
 
 2. **Apply the Deployment**  
-   Deploy the application with the command:
+   Run the following command in your terminal to deploy the application to Kubernetes:
 
    ```bash
    kubectl apply -f deployment.yaml
    ```
-
+   
 ### Step 4: Create the Kubernetes Service
 
 1. **Write the Service YAML File**  
