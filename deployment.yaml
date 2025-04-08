@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculator-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: calculator
+  template:
+    metadata:
+      labels:
+        app: calculator
+    spec:
+      containers:
+      - name: sit323-2025-prac5p
+        image: zhuiyuwei/calculator:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3323
