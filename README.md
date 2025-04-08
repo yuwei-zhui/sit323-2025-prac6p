@@ -77,7 +77,6 @@ The code and configuration files are hosted on GitHub:
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 3323
-
    ```
 
 2. **Apply the Deployment**  
